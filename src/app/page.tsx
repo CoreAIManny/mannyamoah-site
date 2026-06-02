@@ -126,7 +126,7 @@ export default function Home() {
         </div>
         <div className="relative min-h-[320px] md:min-h-0 bg-bg-warm-darker">
           <Image
-            src="/images/manny-hero.jpg"
+            src="/images/manny-hero.png"
             alt="Manny Amoah"
             fill
             className="object-cover object-center"
