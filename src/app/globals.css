@@ -1,26 +1,147 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Accent — Burnt Orange */
+  --accent: #CC5500;
+  --accent-hover: #B34A00;
+  --accent-muted: #D45B34;
+
+  /* Backgrounds */
+  --bg-warm: #EAE8E4;
+  --bg-warm-darker: #DDD9D3;
+  --surface: #FFFFFF;
+
+  /* Text */
+  --text-primary: #2B2B2B;
+  --text-muted: #7A756D;
+  --text-on-accent: #FFFFFF;
+
+  /* Dark sections */
+  --nav-bg: #2B2B2B;
+  --dark-section: #343A40;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-muted: var(--accent-muted);
+  --color-bg-warm: var(--bg-warm);
+  --color-bg-warm-darker: var(--bg-warm-darker);
+  --color-surface: var(--surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-text-on-accent: var(--text-on-accent);
+  --color-nav-bg: var(--nav-bg);
+  --color-dark-section: var(--dark-section);
+  --color-border-warm: #d4d0ca;
+  --font-headline: var(--font-oswald);
+  --font-body: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-warm);
+  color: var(--text-primary);
+  font-family: var(--font-body), sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* MDX prose styles */
+.prose-guide {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+.prose-guide p {
+  margin-bottom: 16px;
+}
+
+.prose-guide h2 {
+  font-family: var(--font-headline), sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 32px 0 12px;
+  color: var(--text-primary);
+}
+
+.prose-guide h3 {
+  font-family: var(--font-headline), sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 24px 0 8px;
+  color: var(--text-primary);
+}
+
+.prose-guide ol,
+.prose-guide ul {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.prose-guide li {
+  margin-bottom: 8px;
+}
+
+.prose-guide strong {
+  font-weight: 600;
+}
+
+.prose-guide a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-guide a:hover {
+  color: var(--accent-hover);
+}
+
+.prose-guide blockquote {
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  padding: 20px 24px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.prose-guide pre {
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  padding: 20px 24px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 15px;
+  overflow-x: auto;
+}
+
+.prose-guide code {
+  background: var(--bg-warm-darker);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.prose-guide pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose-guide hr {
+  border: none;
+  border-top: 1px solid var(--border-warm, #d4d0ca);
+  margin: 32px 0;
+}
+
+/* Hero animation */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-slide-up {
+  animation: fadeSlideUp 0.7s ease-out both;
 }

@@ -1,0 +1,149 @@
+---
+title: "How I Built an AI That Reads 17 News Sources Before I Wake Up"
+slug: "ai-morning-briefing"
+category: "Automation"
+industry: "All"
+topic: "Automation"
+description: "The morning briefing workflow that runs at 6am and delivers angles to my inbox."
+date: "2026-06-02"
+tier: "standard"
+---
+
+# How I Built an AI That Reads 17 News Sources Before I Wake Up
+
+Every morning at 6am, while I'm still asleep, a workflow runs. It scrapes 17 news sources, pulls out the stories relevant to my audience, and delivers a briefing to my inbox with contrarian takes and LinkedIn post angles.
+
+By the time I'm having my coffee, I've got 3-5 content ideas that are timely, relevant, and already partially written.
+
+Here's how it works — and how you can build a simpler version right now without any code.
+
+## Why This Matters
+
+If you're creating content for your business — LinkedIn posts, newsletters, social media — the hardest part isn't writing. It's knowing what to write about.
+
+Most business owners either:
+- Stare at a blank screen for 30 minutes, then give up
+- Post generic motivational quotes that nobody engages with
+- React to news 3 days late, when everyone's already moved on
+
+The briefing solves all three problems. You wake up with fresh angles on stories your audience already cares about. You're not guessing. You're not late. You're first.
+
+## The Manual Version (Start Here)
+
+You don't need automation to do this. You need Claude and 10 minutes.
+
+Every morning, copy and paste the headlines from 2-3 news sources relevant to your industry. Then use this prompt:
+
+> **Morning Briefing Prompt**
+>
+> I run a [your business type] serving [your audience] in the UK.
+>
+> Here are today's headlines from [source 1], [source 2], and [source 3]:
+>
+> [Paste headlines here]
+>
+> For each headline that's relevant to my audience, give me:
+> 1. A one-line summary of why it matters to them
+> 2. A contrarian take — what's the angle nobody is talking about?
+> 3. A LinkedIn post hook (first line) I could use
+> 4. One actionable tip my audience could implement today based on this news
+>
+> Skip any headlines that aren't relevant. Be direct. No fluff.
+
+That's it. 10 minutes. You'll get 3-5 angles with hooks already written.
+
+### Where To Find Headlines
+
+For care agency owners, I pull from:
+- Care Quality Commission news
+- Community Care
+- The Guardian (social care section)
+- Home Care Association updates
+- Skills for Care
+
+For general business:
+- BBC Business
+- The Times (business)
+- TechCrunch (for tech angles)
+- HMRC updates
+- Companies House blog
+
+For your industry, pick 3-5 sources where your clients get their news. That's your list.
+
+## The Automated Version
+
+Here's what my automated setup looks like. You don't need to build exactly this — it's here to show what's possible.
+
+**The stack:**
+- **Firecrawl** — scrapes the 17 news sources and extracts article headlines and summaries
+- **Claude (Sonnet)** — analyses the content and generates the briefing
+- **Cron job** — triggers the whole thing at 6am every day
+- **Email delivery** — sends the briefing to my inbox
+
+**The flow:**
+
+1. At 6:00am, the cron job fires
+2. Firecrawl hits all 17 sources and pulls the day's headlines and lead paragraphs
+3. The scraped content goes to Claude with a detailed prompt that includes my audience profile, my content pillars, and my tone guidelines
+4. Claude returns a structured briefing: 5 stories, each with a summary, contrarian angle, LinkedIn hook, and content thread idea
+5. The briefing gets emailed to me as a formatted HTML email
+
+**Total cost:** Under £5/month (API costs for Claude + Firecrawl free tier).
+
+**Time saved:** About 45 minutes per day of scrolling, reading, and brainstorming.
+
+## What My Briefing Actually Looks Like
+
+Here's a real example of what lands in my inbox (details changed):
+
+> **BRIEFING — 28 May 2026**
+>
+> **Story 1: CQC publishes new provider ratings breakdown**
+> - Summary: 23% of domiciliary care providers now rated Requires Improvement, up from 19% last year
+> - Contrarian angle: The rating drop isn't about bad care — it's about the new evidence framework catching gaps that were always there
+> - LinkedIn hook: "23% of care agencies just got downgraded. But the care hasn't got worse."
+> - Action tip: Run a self-assessment against the 34 quality statements this week
+>
+> **Story 2: UK small business loan defaults hit 5-year high**
+> - Summary: Rising costs and late payments cited as primary factors
+> - Contrarian angle: The businesses defaulting aren't failing — they're profitable on paper but their cash flow systems are broken
+> - LinkedIn hook: "Making a profit doesn't mean you can pay your bills."
+> - Action tip: Check your debtor days — if it's over 45, your invoicing process needs fixing
+
+I get 4-5 of these every morning. Most days, at least 2 of them turn into published content.
+
+## Building Your Version: Three Levels
+
+**Level 1: Manual (free, 10 minutes/day)**
+- Open your news sources
+- Copy headlines into Claude
+- Use the prompt above
+- Pick your best angle and write
+
+**Level 2: Semi-automated (free, 5 minutes/day)**
+- Set up Google Alerts for your key topics (e.g., "CQC inspection," "UK small business automation," "HMRC digital")
+- Google Alerts emails you relevant stories daily
+- Forward the email to Claude and ask for angles
+- Pick and write
+
+**Level 3: Fully automated (£5/month, 0 minutes/day)**
+- Set up web scraping on a schedule
+- Pipe results to an LLM API
+- Deliver via email or Slack
+- You just read and pick
+
+Start at Level 1. If you're doing it consistently for 2 weeks and finding it valuable, move to Level 2. Level 3 only makes sense if you're posting content at least 4-5 times a week.
+
+## What To Do Tomorrow Morning
+
+1. **Pick 3 news sources** your audience reads
+2. **Open Claude** (free tier works fine)
+3. **Copy the prompt above** and fill in your details
+4. **Paste in today's headlines**
+5. **Pick one angle and write a LinkedIn post**
+
+Do this for 5 days straight. You'll have more content ideas than you know what to do with — and every single one will be timely and relevant to the people you're trying to reach.
+
+---
+
+*Want help setting up the automated version? [Book a call](/contact) and I'll walk you through the exact setup for your industry.*

@@ -1,0 +1,106 @@
+---
+title: "The £43K Question: How Care Agencies Lose Money They've Already Earned"
+slug: "the-43k-question"
+category: "Cost Savings"
+industry: "Care"
+topic: "Cost Savings"
+description: "The revenue leak hiding in almost every care agency's billing process."
+date: "2026-06-02"
+tier: "standard"
+---
+
+# The £43K Question: How Care Agencies Lose Money They've Already Earned
+
+There's a number that keeps showing up when I look at care agency finances. It's not a guess — it's based on real data from agencies doing between £500K and £2M in revenue.
+
+**£43,000 a year.** That's the average amount care agencies lose to billing errors, late invoicing, and disconnected systems.
+
+Not because anyone's stealing. Not because the work isn't being done. But because the systems that track the work don't talk to the systems that bill for it.
+
+## The Disconnected Systems Problem
+
+Here's what a typical care agency's workflow looks like:
+
+1. **Rostering system** schedules the carer
+2. **Carer logs visits** on a mobile app or paper timesheet
+3. **Coordinator** checks the logs against the rota
+4. **Admin** manually enters billable hours into an invoicing tool
+5. **Invoice** goes to the council or private client
+6. **Payment** arrives (eventually)
+
+Between steps 2 and 5, there are at least three handoffs where data gets lost, delayed, or entered wrong. Every handoff is a leak.
+
+The most common leaks I see:
+
+- **Missed visits that were actually completed** — the carer did the work but the log didn't sync, so it never got billed
+- **Wrong rates applied** — bank holiday rates, weekend rates, complex care uplifts — entered manually and often wrong
+- **Late submissions** — councils have billing windows. Miss the window, wait another month. Or lose it entirely
+- **Duplicate credits** — a queried invoice gets credited twice because nobody tracked the first credit
+
+## The National Picture
+
+Late payments in the UK care sector contribute to an estimated **£11 billion per year** in cash flow problems across health and social care. That's not all billing errors — but a significant chunk comes from the gap between care delivery and accurate invoicing.
+
+For a single agency running 200 service users, even a 2% billing error rate on £1.5M revenue is **£30,000 lost**. Add in late submission penalties and cash flow costs from delayed payments, and you're well past £40K.
+
+## The Quick Fix: A VLOOKUP Reconciliation Sheet
+
+Before you spend anything on new software, you can catch most of these leaks with a spreadsheet. Here's how.
+
+**Step 1: Export your rota data**
+
+Pull a CSV from your rostering system with these columns: Date, Client, Carer, Scheduled Start, Scheduled End, Visit Type.
+
+**Step 2: Export your visit logs**
+
+Pull a CSV from your care management system with: Date, Client, Carer, Actual Start, Actual End, Status.
+
+**Step 3: Build a reconciliation sheet**
+
+In a new spreadsheet, use VLOOKUP (or XLOOKUP if you're on modern Excel) to match scheduled visits against actual visits.
+
+> ```
+> =VLOOKUP(A2&B2&C2, LogsTable, 5, FALSE)
+> ```
+>
+> This matches on a concatenated key of Date + Client + Carer. If it returns an error, that visit was scheduled but never logged — and probably never billed.
+
+**Step 4: Flag the gaps**
+
+Add a column with a simple IF formula:
+
+> ```
+> =IF(ISERROR(E2), "UNBILLED", "OK")
+> ```
+
+**Step 5: Run this weekly**
+
+Every Monday morning. 30 minutes. You'll catch unbilled visits before the billing window closes.
+
+## The Automation Path
+
+The spreadsheet method works. But it's manual, and it depends on someone remembering to do it every week.
+
+The automated version looks like this:
+
+1. **Scheduled data pull** — your rostering and care management systems export data automatically (most modern systems support this via API or scheduled CSV export)
+2. **Matching engine** — a script compares scheduled vs. actual visits, flags mismatches, and checks rate accuracy
+3. **Alert system** — you get a summary email every Monday with: unbilled visits, rate mismatches, approaching billing deadlines
+4. **Dashboard** — running totals of recovered revenue so you can see the impact
+
+I've built this for agencies and the typical setup takes 2-3 weeks. The ROI is usually visible in the first billing cycle.
+
+## What To Do This Week
+
+1. **Export last month's rota and visit logs** — just get the CSVs
+2. **Build the reconciliation sheet** using the formulas above
+3. **Count the unbilled visits** — multiply by your average hourly rate
+4. **That number is your annual leak** multiplied by 12
+
+If it's under £5K a year, the spreadsheet method is probably enough. If it's over £15K, you need to automate this.
+
+Either way, you now know the answer to the £43K question. And that's the first step to plugging the leak.
+
+---
+
+*Need help building the automated version? [Book a free 15-minute call](/contact) and I'll walk you through exactly what it would look like for your agency.*
