@@ -1,32 +1,32 @@
 ---
-title: "How I Built an AI That Reads 17 News Sources Before I Wake Up"
+title: "How I Built an AI That Monitors My Clients' Industries Before They Wake Up"
 slug: "ai-morning-briefing"
 category: "Automation"
 industry: "All"
 topic: "Automation"
-description: "The morning briefing workflow that runs at 6am and delivers angles to my inbox."
+description: "The automated business intelligence system that runs at 6am and delivers what matters to your inbox."
 date: "2026-06-02"
 tier: "standard"
 ---
 
-# How I Built an AI That Reads 17 News Sources Before I Wake Up
+# How I Built an AI That Monitors My Clients' Industries Before They Wake Up
 
-Every morning at 6am, while I'm still asleep, a workflow runs. It scrapes 17 news sources, pulls out the stories relevant to my audience, and delivers a briefing to my inbox with contrarian takes and LinkedIn post angles.
+Every morning at 6am, while I'm still asleep, a workflow runs. It scrapes 17 news sources, pulls out stories that affect my clients' businesses, and delivers a briefing to my inbox with analysis, risk flags, and action items.
 
-By the time I'm having my coffee, I've got 3-5 content ideas that are timely, relevant, and already partially written.
+By the time I'm having my coffee, I know which clients need a heads-up, which regulations have changed, and which market shifts could impact their revenue.
 
-Here's how it works — and how you can build a simpler version right now without any code.
+Here's how it works — and how you can build a simpler version right now to stay ahead of changes in your industry.
 
-## Why This Matters
+## Why This Matters for Your Business
 
-If you're creating content for your business — LinkedIn posts, newsletters, social media — the hardest part isn't writing. It's knowing what to write about.
+If you run a business in a regulated or fast-moving sector — care, trades, professional services, property — you're affected by changes you don't see coming. CQC updates its inspection framework. HMRC changes a threshold. A competitor launches a new service. Energy costs shift. Employment law changes.
 
-Most business owners either:
-- Stare at a blank screen for 30 minutes, then give up
-- Post generic motivational quotes that nobody engages with
-- React to news 3 days late, when everyone's already moved on
+Most business owners find out about these changes in one of three ways:
+- Their accountant tells them — 3 months late
+- A LinkedIn post — after everyone's already reacted
+- An inspector — at the worst possible moment
 
-The briefing solves all three problems. You wake up with fresh angles on stories your audience already cares about. You're not guessing. You're not late. You're first.
+An automated monitoring system flips this. You find out first. You act first. Your clients see you as the person who always knows what's happening.
 
 ## The Manual Version (Start Here)
 
@@ -34,45 +34,83 @@ You don't need automation to do this. You need Claude and 10 minutes.
 
 Every morning, copy and paste the headlines from 2-3 news sources relevant to your industry. Then use this prompt:
 
-> **Morning Briefing Prompt**
+> **Business Intelligence Briefing Prompt**
 >
-> I run a [your business type] serving [your audience] in the UK.
+> I run a [your business type] serving [your clients/audience] in the UK.
 >
 > Here are today's headlines from [source 1], [source 2], and [source 3]:
 >
 > [Paste headlines here]
 >
-> For each headline that's relevant to my audience, give me:
-> 1. A one-line summary of why it matters to them
-> 2. A contrarian take — what's the angle nobody is talking about?
-> 3. A LinkedIn post hook (first line) I could use
-> 4. One actionable tip my audience could implement today based on this news
+> For each headline that could affect my business or my clients, give me:
+> 1. A one-line summary of the change or development
+> 2. Who it affects and how (be specific — which types of business, which staff, which processes)
+> 3. What action I should take this week (or tell my clients to take)
+> 4. Risk level: HIGH (act now), MEDIUM (plan for it), LOW (monitor)
 >
-> Skip any headlines that aren't relevant. Be direct. No fluff.
+> Skip anything irrelevant. Be direct. No fluff.
 
-That's it. 10 minutes. You'll get 3-5 angles with hooks already written.
+That's it. 10 minutes. You'll know more about what's coming than 90% of your competitors.
 
-### Where To Find Headlines
+### Where To Find Headlines by Sector
 
-For care agency owners, I pull from:
+**Care agencies:**
 - Care Quality Commission news
 - Community Care
 - The Guardian (social care section)
 - Home Care Association updates
 - Skills for Care
 
-For general business:
+**Trades and construction:**
+- Construction Enquirer
+- HMRC updates (MTD, CIS changes)
+- HSE news
+- Federation of Master Builders
+
+**Professional services:**
 - BBC Business
 - The Times (business)
-- TechCrunch (for tech angles)
 - HMRC updates
 - Companies House blog
+- Law Society / ICAEW updates (depending on your niche)
 
-For your industry, pick 3-5 sources where your clients get their news. That's your list.
+**General business:**
+- BBC Business
+- GOV.UK news
+- British Chambers of Commerce
+- FSB (Federation of Small Businesses)
+
+Pick 3-5 sources where your clients get their news. That's your list.
+
+## What a Business Intelligence Briefing Actually Looks Like
+
+Here's a real example of what lands in my inbox (details changed):
+
+> **BRIEFING — 28 May 2026**
+>
+> **1. CQC publishes new provider ratings breakdown**
+> - Summary: 23% of domiciliary care providers now rated Requires Improvement, up from 19% last year
+> - Affects: All domiciliary care providers, especially those due for inspection in next 6 months
+> - Action: Run a self-assessment against the 34 quality statements this week. Focus on weakest key question first — the new framework caps your overall rating at your lowest score
+> - Risk: HIGH for agencies not yet inspected under SAF
+>
+> **2. UK small business loan defaults hit 5-year high**
+> - Summary: Rising costs and late payments cited as primary factors
+> - Affects: Any SMB with outstanding invoices or variable cash flow
+> - Action: Check debtor days. If over 45, your invoicing process needs automated reminders (Xero and QuickBooks both have this built in). Review your payment terms — consider offering 2% early payment discount
+> - Risk: MEDIUM — systemic, not immediate
+>
+> **3. Employment Allowance doubled to £10,500**
+> - Summary: Eligibility cap removed. Almost every employer with 1+ employee now qualifies
+> - Affects: All clients with employees
+> - Action: Check if all clients are claiming. Most aren't. Flag to accountant or apply directly through payroll software
+> - Risk: LOW risk, HIGH opportunity — this is free money most SMBs are missing
+
+I get 3-5 of these every morning. At least 2 per week lead to direct client actions — a call to flag a change, a process update, or a new service recommendation.
 
 ## The Automated Version
 
-Here's what my automated setup looks like. You don't need to build exactly this — it's here to show what's possible.
+Here's what my fully automated setup looks like. You don't need to build exactly this — it's here to show what's possible.
 
 **The stack:**
 - **Firecrawl** — scrapes the 17 news sources and extracts article headlines and summaries
@@ -84,33 +122,25 @@ Here's what my automated setup looks like. You don't need to build exactly this 
 
 1. At 6:00am, the cron job fires
 2. Firecrawl hits all 17 sources and pulls the day's headlines and lead paragraphs
-3. The scraped content goes to Claude with a detailed prompt that includes my audience profile, my content pillars, and my tone guidelines
-4. Claude returns a structured briefing: 5 stories, each with a summary, contrarian angle, LinkedIn hook, and content thread idea
+3. The scraped content goes to Claude with a detailed prompt that includes my client profiles, their industries, and what changes would affect them
+4. Claude returns a structured briefing: 3-5 stories, each with a summary, who it affects, what to do, and risk level
 5. The briefing gets emailed to me as a formatted HTML email
 
 **Total cost:** Under £5/month (API costs for Claude + Firecrawl free tier).
 
-**Time saved:** About 45 minutes per day of scrolling, reading, and brainstorming.
+**Time saved:** About 45 minutes per day of scrolling, reading, and analysing.
 
-## What My Briefing Actually Looks Like
+## How This Applies to Your Business
 
-Here's a real example of what lands in my inbox (details changed):
+This isn't just for advisors. Any business that needs to stay current can use this:
 
-> **BRIEFING — 28 May 2026**
->
-> **Story 1: CQC publishes new provider ratings breakdown**
-> - Summary: 23% of domiciliary care providers now rated Requires Improvement, up from 19% last year
-> - Contrarian angle: The rating drop isn't about bad care — it's about the new evidence framework catching gaps that were always there
-> - LinkedIn hook: "23% of care agencies just got downgraded. But the care hasn't got worse."
-> - Action tip: Run a self-assessment against the 34 quality statements this week
->
-> **Story 2: UK small business loan defaults hit 5-year high**
-> - Summary: Rising costs and late payments cited as primary factors
-> - Contrarian angle: The businesses defaulting aren't failing — they're profitable on paper but their cash flow systems are broken
-> - LinkedIn hook: "Making a profit doesn't mean you can pay your bills."
-> - Action tip: Check your debtor days — if it's over 45, your invoicing process needs fixing
+**Care agencies** — Monitor CQC policy changes, local authority contract updates, employment law shifts, and competitor inspection results. Your registered manager gets a weekly briefing instead of relying on conference hearsay.
 
-I get 4-5 of these every morning. Most days, at least 2 of them turn into published content.
+**Trades businesses** — Track HSE regulation changes, Building Safety Act updates, material price movements, and local planning applications. Know about changes before they hit your projects.
+
+**Professional services** — Follow regulatory updates from your professional body, client industry news, and market trends. Be the advisor who emails your client about a change before they've even heard about it.
+
+**Any SMB with employees** — Employment law changes, minimum wage updates, NI threshold shifts, new compliance requirements. The April 2026 changes alone (NI up from 13.8% to 15%, day-one sick pay rights, Fair Work Agency launch) caught most SMBs off guard.
 
 ## Building Your Version: Three Levels
 
@@ -118,32 +148,32 @@ I get 4-5 of these every morning. Most days, at least 2 of them turn into publis
 - Open your news sources
 - Copy headlines into Claude
 - Use the prompt above
-- Pick your best angle and write
+- Read, flag anything that needs action
 
 **Level 2: Semi-automated (free, 5 minutes/day)**
-- Set up Google Alerts for your key topics (e.g., "CQC inspection," "UK small business automation," "HMRC digital")
+- Set up Google Alerts for your key topics (e.g., "CQC inspection," "UK employment law changes," "HMRC digital")
 - Google Alerts emails you relevant stories daily
-- Forward the email to Claude and ask for angles
-- Pick and write
+- Forward the email to Claude and ask for analysis
+- Read and act
 
 **Level 3: Fully automated (£5/month, 0 minutes/day)**
 - Set up web scraping on a schedule
 - Pipe results to an LLM API
 - Deliver via email or Slack
-- You just read and pick
+- You just read and act
 
-Start at Level 1. If you're doing it consistently for 2 weeks and finding it valuable, move to Level 2. Level 3 only makes sense if you're posting content at least 4-5 times a week.
+Start at Level 1. If you're doing it consistently for 2 weeks and finding it valuable, move to Level 2. Level 3 only makes sense if you're monitoring multiple sectors or managing several clients.
 
 ## What To Do Tomorrow Morning
 
-1. **Pick 3 news sources** your audience reads
+1. **Pick 3 news sources** relevant to your industry (use the lists above)
 2. **Open Claude** (free tier works fine)
 3. **Copy the prompt above** and fill in your details
 4. **Paste in today's headlines**
-5. **Pick one angle and write a LinkedIn post**
+5. **Read the briefing** — highlight anything that needs action this week
 
-Do this for 5 days straight. You'll have more content ideas than you know what to do with — and every single one will be timely and relevant to the people you're trying to reach.
+Do this for 5 days straight. You'll catch at least one change that would have blindsided you — and you'll understand why the businesses that stay ahead aren't working harder, they're just reading smarter.
 
 ---
 
-*Want help setting up the automated version? [Book a call](/contact) and I'll walk you through the exact setup for your industry.*
+*Want help setting up the automated version for your business or your team? [Book a call](/contact) and I'll walk you through the exact setup for your industry.*

@@ -124,12 +124,12 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="relative min-h-[320px] md:min-h-0 bg-bg-warm-darker">
+        <div className="relative min-h-[320px] md:min-h-0">
           <Image
             src="/images/manny-hero.png"
             alt="Manny Amoah"
             fill
-            className="object-cover object-center"
+            className="object-cover object-top"
             priority
           />
         </div>

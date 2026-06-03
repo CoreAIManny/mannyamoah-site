@@ -1,0 +1,174 @@
+---
+title: "Your Care Plans Take 3x Longer Than They Should"
+slug: "care-plans-take-3x-longer-than-they-should"
+category: "Care"
+industry: "Care"
+topic: "Automation"
+description: "A care coordinator spent 45 minutes on one care plan. We cut it to two. Here's how."
+date: "2026-06-03"
+tier: "standard"
+---
+
+# Your Care Plans Take 3x Longer Than They Should
+
+I watched a care coordinator spend 45 minutes writing one care plan.
+
+She had the assessment notes. She had the template. She had the service user's history. But she was still typing it all out manually — copying sections, rewording the same phrases, formatting the same headings, checking the same boxes.
+
+Forty-five minutes. One care plan.
+
+We built a prompt that takes assessment notes and generates a draft in two minutes. She reviews it, tweaks the tone, done. Same quality. Same person-centred language. A fraction of the time.
+
+Here's exactly how to do it.
+
+## Why Care Plans Take So Long
+
+It's not because care coordinators are slow. It's because the process was never designed — it just evolved.
+
+Here's what actually happens when someone writes a care plan from scratch:
+
+| Step | Time | What's Really Happening |
+|------|------|------------------------|
+| Open the template | 2 min | Finding the right version, making a copy |
+| Read through assessment notes | 8 min | Extracting the relevant details from pages of notes |
+| Write personal care section | 7 min | Rewording things they've written a hundred times before |
+| Write medication section | 5 min | Copying medication details and adding standard instructions |
+| Write nutrition section | 5 min | Adapting standard text to the service user's preferences |
+| Write mobility section | 5 min | Same — adapting boilerplate to specific needs |
+| Write communication section | 4 min | Noting preferences, language needs, sensory impairments |
+| Add risk assessment references | 3 min | Cross-referencing risk assessments and linking them |
+| Format and check | 5 min | Making sure it reads well, nothing missing |
+| **Total** | **44 min** | **~35 min is adaptation of things already written before** |
+
+Look at that breakdown. The judgment — understanding what the service user needs — takes about 10 minutes. The other 35 minutes is typing, formatting, and adapting standard text. That's the waste.
+
+## The Prompt
+
+Here's the exact prompt I use. Copy it, paste in your assessment notes, and run it in Claude (free tier works).
+
+> You are an experienced care coordinator writing a person-centred care plan for a UK domiciliary care agency. The care plan must be written in warm, professional language that treats the service user as an individual, not a set of tasks.
+>
+> **Assessment notes:**
+>
+> [Paste your assessment notes here]
+>
+> Based on these notes, write a complete care plan covering:
+>
+> 1. **Personal care** — washing, dressing, grooming preferences. Include specific preferences from the notes (e.g., prefers shower over bath, likes to choose own clothes).
+>
+> 2. **Medication** — what they take, when, any support needed (prompting, administering, specialist storage). Note any allergies.
+>
+> 3. **Nutrition and hydration** — dietary needs, preferences, cultural requirements, fluid intake targets. Note any swallowing difficulties or PEG feeds.
+>
+> 4. **Mobility** — current ability, equipment used (frame, wheelchair, stairlift), transfer methods, falls history, what support looks like.
+>
+> 5. **Communication** — how they prefer to communicate, any hearing/vision/cognitive considerations, language needs, how to involve them in decisions.
+>
+> 6. **Social and emotional wellbeing** — interests, routines, relationships, what makes them happy, signs of distress, how to respond.
+>
+> 7. **Overnight care** (if applicable) — sleeping patterns, night-time needs, repositioning schedule, continence support.
+>
+> 8. **Goals and outcomes** — what the service user wants to achieve or maintain. Frame as their goals, not ours.
+>
+> **Rules:**
+> - Write in first person from the carer's perspective ("I will support Mrs Ahmed to...")
+> - Use the service user's name and preferred form of address throughout
+> - Be specific — no generic phrases like "assist with personal care as required"
+> - Reference the service user's preferences, not just their needs
+> - Flag any areas where information is missing and more detail is needed
+> - Keep the tone warm but professional — this is a working document, not a report
+
+## What You Get Back
+
+The output is a complete draft care plan — typically 800-1,200 words — covering all 8 sections. It pulls specific details from your assessment notes: Mrs Ahmed prefers to be called "Auntie Amina," she likes her tea strong with one sugar, she uses a wheeled frame indoors but a wheelchair for longer distances.
+
+The AI handles:
+- Structuring the sections consistently
+- Writing in person-centred language
+- Adapting standard phrases to the individual
+- Flagging gaps where assessment notes are thin
+
+You handle:
+- Reviewing for accuracy (does this match what you observed?)
+- Adjusting tone (does this sound like your agency's voice?)
+- Adding anything the notes didn't capture
+- Signing off
+
+**Total time: 2-5 minutes** for the review and tweaks. Down from 45.
+
+## Making It Better
+
+### Teach It Your Agency's Voice
+
+Run the prompt once with your standard text. Then add this follow-up:
+
+> Here's an example of a care plan we've written before that represents our agency's voice and style:
+>
+> [Paste an existing care plan you're happy with]
+>
+> Rewrite the draft above to match this style — same warmth, same level of detail, same phrasing patterns.
+
+After this, every care plan will sound like your agency wrote it, not a generic template.
+
+### Batch Process Multiple Plans
+
+If you have 5 care plans to write, don't run the prompt 5 times separately. Prepare all 5 sets of assessment notes, then run them back-to-back in the same conversation. Claude will maintain consistency across all of them — same tone, same structure, same level of detail.
+
+A coordinator who used to spend an entire morning on 5 care plans can now do them in 20 minutes.
+
+### Use It for Reviews Too
+
+Care plans should be reviewed regularly — but the review often gets skipped because it takes almost as long as writing a new one. Use this prompt instead:
+
+> Here is an existing care plan written 3 months ago:
+>
+> [Paste existing care plan]
+>
+> Here are the latest care notes and observations from the last 3 months:
+>
+> [Paste recent notes]
+>
+> Update the care plan to reflect any changes in the service user's needs, preferences, or circumstances. Highlight what's changed and why. Keep the same format and tone.
+
+The review takes 2 minutes instead of 20. And it actually happens on schedule instead of being pushed back indefinitely.
+
+## The Numbers
+
+For a care agency with 50 service users, each needing an annual review plus ad-hoc updates:
+
+| | Manual | With AI Drafting |
+|---|--------|-----------------|
+| Time per care plan | 45 min | 5 min |
+| Annual reviews (50) | 37.5 hours | 4.2 hours |
+| Ad-hoc updates (est. 100/year) | 25 hours | 4.2 hours |
+| **Total annual time** | **62.5 hours** | **8.4 hours** |
+| **Time saved** | — | **54 hours/year** |
+| **Cost saved** (coordinator at £14/hr) | — | **£756/year** |
+
+That's 54 hours a year your care coordinator gets back. Not to mention the compliance benefit — care plans actually get reviewed on schedule because the barrier to doing it just dropped from 45 minutes to 5.
+
+## What This Doesn't Replace
+
+Let me be clear about what the AI does and doesn't do here:
+
+**AI does:** Draft the document from your notes. Structure it consistently. Write in person-centred language. Flag gaps.
+
+**AI doesn't:** Assess the service user. Make clinical decisions. Know things that aren't in the notes. Replace the coordinator's judgment.
+
+The assessment is still human. The decision-making is still human. The sign-off is still human. The only thing that changed is who does the typing.
+
+## What To Do Today
+
+1. **Find your last set of assessment notes** for any service user
+2. **Open Claude** — claude.ai, free tier
+3. **Copy the prompt above** and paste in the notes
+4. **Read the output** — compare it to what you would have written
+5. **Time the whole thing** — prompt to finished draft
+
+If the quality is 90% of what you'd write manually, and it took 2 minutes instead of 45, you've just found your next automation win.
+
+Now multiply that across every care plan your agency writes this year.
+
+---
+
+*This is one of 54 automation opportunities in a care agency. Want to see all of them? [Read the 54-Point Care Agency Automation Checklist](/guides/54-point-care-agency-automation-checklist). Or if you want help implementing the ones that save the most time, [book a call](/contact).*
