@@ -1,0 +1,240 @@
+---
+title: "Stop Reading Contracts Line by Line. Use This Prompt Instead."
+slug: "contract-review-with-claude"
+category: "AI Tools"
+industry: "All"
+topic: "AI Tools"
+description: "The exact prompt I use to review contracts, leases, and supplier agreements in 90 seconds — plus what Claude is actually good at (and what it's not)."
+date: "2026-06-12"
+tier: "standard"
+---
+
+# Stop Reading Contracts Line by Line. Use This Prompt Instead.
+
+Last week, a client pasted a 12-page software contract into Claude. In 90 seconds, it found three things:
+
+- A **silent auto-renewal** worth £2,400/year — set to trigger in 6 weeks with no reminder
+- A **data ownership clause** giving the vendor permanent rights to their client data
+- A **90-day exit notice** buried on page 9 that nobody had flagged
+
+The client had signed a near-identical contract the year before. That one auto-renewed. Cost them £2,400 they didn't budget for.
+
+Most business owners sign contracts without fully reading them. Not because they're careless — because the documents are deliberately long, dense, and designed to be skimmed. A 12-page SaaS agreement. A 20-page office lease. A supplier contract with 47 clauses. Nobody has time to parse that line by line.
+
+But you do need to know what's in there. And now, you can — in under 2 minutes.
+
+Here are three prompts. The first reviews the whole contract. The second digs into anything concerning. The third drafts your pushback. Copy them, save them, use them on every agreement you sign from today.
+
+## Prompt 1: The Quick Review
+
+This is the main prompt. Paste your contract into Claude, then paste this directly below it.
+
+> You are a commercial contract reviewer with 15 years of experience advising UK small businesses. You are not a solicitor and your analysis does not constitute legal advice — it is a practical risk review to help the business owner understand what they are signing.
+>
+> I have pasted a contract/agreement above. Please analyse it and provide the following:
+>
+> **About my situation:**
+> - My business type: [e.g., care agency, consultancy, trades, retail]
+> - My role in this contract: [e.g., I'm the customer buying software / I'm the tenant signing a lease / I'm the supplier being contracted]
+> - My main concern: [e.g., cost, data ownership, exit flexibility, liability — or "general review"]
+>
+> **Please provide your analysis in these exact sections:**
+>
+> **1. PLAIN ENGLISH SUMMARY (3-5 sentences)**
+> What is this contract actually saying? Summarise as if explaining to a non-legal business owner.
+>
+> **2. MONEY — Everything That Costs Me**
+> List every financial obligation, including:
+> - Recurring fees and payment terms
+> - One-off charges, setup fees, deposits
+> - Auto-renewal terms and price escalation clauses
+> - Penalties for late payment, early termination, or breach
+> - Any costs that are vague, uncapped, or left to the vendor's discretion
+>
+> For each item, note the clause/section reference and flag as: ✅ Standard | ⚠️ Review | 🚩 Concerning
+>
+> **3. LOCK-IN — What Ties Me Down**
+> List anything that restricts my flexibility:
+> - Minimum contract term and renewal mechanism (auto vs manual)
+> - Notice period to cancel (and when the window opens)
+> - Exclusivity or non-compete clauses
+> - Restrictions on switching to a competitor
+>
+> For each: clause reference + ✅ ⚠️ or 🚩
+>
+> **4. RISK — What Could Hurt Me**
+> List anything that transfers risk to me:
+> - Limitation of liability (especially if it caps their liability but not mine)
+> - Indemnification clauses (am I covering their losses?)
+> - Data ownership and intellectual property
+> - Confidentiality obligations (are they mutual or one-sided?)
+> - Force majeure — does it excuse them but not me?
+>
+> For each: clause reference + ✅ ⚠️ or 🚩
+>
+> **5. DEADLINES — Every Date That Matters**
+> Create a timeline of:
+> - Contract start and end date
+> - Renewal date and notice window
+> - Payment due dates
+> - Any review periods or break clauses
+> - Deadlines I must not miss
+>
+> Format as a simple date list I can put in my calendar.
+>
+> **6. WHAT'S MISSING**
+> Flag anything a standard contract of this type should include but doesn't:
+> - Missing SLAs or performance guarantees
+> - No data processing agreement (if personal data is involved)
+> - No dispute resolution process
+> - Missing termination for cause clause
+>
+> **7. BOTTOM LINE — Should I Sign This?**
+> Give me your overall assessment:
+> - How does this contract compare to market standard for this type of agreement?
+> - What are the top 3 things I should push back on before signing?
+> - Is there anything that should be a deal-breaker?
+>
+> Be specific. Reference exact clause numbers. Use plain English, not legal jargon.
+
+### How To Use It
+
+1. Open [claude.ai](https://claude.ai) (free tier works)
+2. Paste the full contract text into the chat (or upload the PDF — Claude reads PDFs)
+3. Paste the prompt directly below the contract
+4. Fill in the three "About my situation" fields
+5. Hit enter. Wait 60-90 seconds.
+
+The output will be a structured review with severity flags on every clause. Save the conversation — you can reference it later.
+
+## What It Checks
+
+The prompt is designed to catch the seven things that cost business owners money in contracts:
+
+### 1. Silent Auto-Renewals
+The clause that says "this agreement renews automatically for successive 12-month periods unless terminated with 90 days' written notice." Translation: if you forget to cancel by a specific date, you're locked in for another year. The prompt flags the renewal mechanism, the notice window, and the exact date you need to act by.
+
+### 2. Price Escalation
+"Fees may be adjusted annually at the Provider's discretion" or "prices increase by RPI + 3% each year." These clauses mean your costs go up automatically and there's often no cap. The prompt flags whether increases are capped, how they're calculated, and whether you can exit if the increase is unreasonable.
+
+### 3. Data Ownership
+Who owns the data you put into a system? If you're using a CRM, a care management platform, or a project management tool — your client data lives on their servers. The prompt checks: who owns it, can you export it, what happens to it if you leave, and whether they can use it for their own purposes.
+
+### 4. Liability Caps
+Many contracts cap the vendor's liability at "fees paid in the last 12 months" — meaning if their software failure costs you £50,000 in lost business, the maximum they'll pay is whatever you paid them (often £500-2,000/year for a SaaS tool). Meanwhile, your liability to them may be uncapped. The prompt flags asymmetric liability.
+
+### 5. Exit Restrictions
+How hard is it to leave? Some contracts have 90-day notice periods, others require 6 months. Some charge early termination fees. Some make you pay for the remainder of the term even if you cancel. The prompt maps the exact exit path and its cost.
+
+### 6. One-Sided Obligations
+Confidentiality that only applies to you but not them. Indemnification where you cover their losses but they don't cover yours. Force majeure that excuses their performance failures but holds you to your obligations. The prompt checks for mutuality.
+
+### 7. Missing Protections
+What should be in the contract but isn't? No SLA on a software product means there's no guaranteed uptime. No data processing agreement means there's no GDPR compliance framework. No dispute resolution clause means any disagreement goes straight to expensive litigation.
+
+## Real Results
+
+Here are three anonymised reviews from the last month:
+
+**Software contract (SaaS tool for a care agency)**
+- 🚩 Auto-renewal: 12-month lock-in, 90-day notice window, client had 3 weeks left to cancel
+- 🚩 Data ownership: Clause 8.3 granted vendor a "perpetual, irrevocable licence" to use anonymised client data
+- ⚠️ Price escalation: "Fees adjusted annually" with no cap specified
+- ⚠️ Liability capped at "fees paid in prior 12 months" (£1,800) — client's data was worth significantly more
+- **Cost avoided: £2,400** (caught auto-renewal before the window closed)
+
+**Office lease (professional services firm)**
+- 🚩 Break clause required 6 months' notice + 3 months' rent penalty — effectively 9 months to exit
+- ⚠️ Rent review clause allowed "upward only" adjustment — could never go down, even if market rates fell
+- ⚠️ Repairs clause made tenant responsible for "structural and non-structural repairs" — unusual for a standard commercial lease
+- ✅ Insurance obligations were standard and mutual
+- **Savings: £4,800/year** negotiated by pushing back on the repairs clause with Prompt 3
+
+**Supplier agreement (trades business)**
+- 🚩 Payment terms: "Net 14 days" with 8% late penalty — extremely aggressive for a small business relationship
+- ⚠️ Exclusivity clause prevented using any competing supplier for the contract term (24 months)
+- ⚠️ No force majeure protection for the buyer — supplier could delay with no consequence
+- ✅ IP and data clauses were fair and standard
+- **Negotiated:** Extended payment terms to Net 30, removed exclusivity, added mutual force majeure
+
+## Prompt 2: The Deep Dive
+
+After running Prompt 1, you'll have flagged clauses. Use this prompt to dig into any specific clause that concerns you:
+
+> I'm reviewing the contract I shared earlier. You flagged [clause/section reference] as concerning.
+>
+> Please give me:
+>
+> 1. **Plain English explanation** — What does this clause actually mean for me in practice? Give me a real-world scenario where it would apply.
+>
+> 2. **Market comparison** — Is this clause standard for a [type of contract] in the UK? What would a more balanced version look like?
+>
+> 3. **Risk assessment** — What's the worst-case financial impact of this clause? What's the realistic impact?
+>
+> 4. **What I should ask for instead** — If I push back, what's a reasonable alternative clause? Write it in plain English so I can tell my solicitor what I want.
+
+### When To Use It
+
+Use this on any clause marked ⚠️ or 🚩 in the Quick Review. You don't need to deep-dive every clause — focus on the ones that have a direct financial impact or lock you in.
+
+## Prompt 3: The Negotiation Draft
+
+Once you know what you want to change, use this to draft your pushback:
+
+> I need to push back on [specific clause] in the contract I shared.
+>
+> My position: [e.g., I want to remove the auto-renewal / I want mutual liability caps / I want Net 30 payment terms instead of Net 14]
+>
+> Please draft a short, professional email to the other party requesting this change. The tone should be:
+> - Collaborative, not adversarial
+> - Firm but fair
+> - Focused on finding a workable solution for both sides
+>
+> Include:
+> - A clear statement of which clause I want changed
+> - Why the current clause is problematic (from my perspective)
+> - My proposed alternative
+> - An invitation to discuss
+>
+> Keep it under 200 words. I want to sound like a professional business owner, not a solicitor.
+
+### Why This Works
+
+Most people don't push back on contracts because they don't know how to phrase it. This prompt gives you professional, measured language you can send directly or adapt. The collaborative tone is deliberate — you're not threatening, you're negotiating.
+
+## What Claude Is Good At (And What It's Not)
+
+**Claude is genuinely good at:**
+- Reading long documents quickly and finding the important parts
+- Translating legal language into plain English
+- Identifying asymmetric clauses (one-sided obligations)
+- Spotting missing protections
+- Comparing clauses to standard market practice
+- Structuring information so you can act on it
+
+**Claude is NOT:**
+- A solicitor. Its analysis is not legal advice and has no legal standing.
+- Infallible. It can miss nuances, especially in heavily negotiated bespoke contracts.
+- Aware of your full business context. It doesn't know your negotiating position, your relationship with the other party, or your risk tolerance.
+- Up to date on every regulatory change. Always verify compliance-critical clauses with a professional.
+
+**The rule:** Use Claude to **find** the risks. Use a solicitor to **fix** them. Claude is your first pass — it turns a 12-page document into a 1-page brief so your solicitor's time (and your bill) is focused on what actually matters.
+
+For most small business contracts — SaaS agreements, office leases, supplier terms — the Quick Review prompt will catch 90% of what you need to know. For high-value contracts (acquisitions, partnership agreements, property purchases), always get professional advice.
+
+## What To Do Tonight
+
+1. **Find the last contract you signed without reading properly** — check your email for "terms," "agreement," or "contract" attachments
+2. **Open Claude** at [claude.ai](https://claude.ai) — the free tier works for this
+3. **Paste the contract** (or upload the PDF) and add Prompt 1 below it
+4. **Fill in the three context fields** — business type, your role, your concern
+5. **Read the output** — focus on anything marked 🚩
+6. **Use Prompt 2** on any clause that concerns you
+7. **If you need to push back**, use Prompt 3 to draft your response
+8. **Save these three prompts** — use them on every contract, lease, and agreement from now on
+
+The prompts are free. Claude is free. The only cost is 10 minutes of your time. And if it catches even one auto-renewal or one liability trap, that's hundreds or thousands saved.
+
+---
+
+*Want someone to review your contracts alongside you and implement the fixes? [Book a free assessment call](/contact) — I'll walk through your findings and show you what to prioritise.*
