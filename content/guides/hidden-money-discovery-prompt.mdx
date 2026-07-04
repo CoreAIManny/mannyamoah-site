@@ -1,0 +1,183 @@
+---
+title: "The £86K Discovery Prompt — Find Hidden Money in Your Business"
+slug: "hidden-money-discovery-prompt"
+category: "AI Tools"
+industry: "All"
+topic: "Business Intelligence"
+description: "The exact Claude AI prompt I used to find £86,400 hidden in a UK care agency — plus the step-by-step process to run it on your own business."
+date: "2026-07-04"
+tier: "deep-dive"
+---
+
+# The £86K Discovery Prompt
+
+I built a live KPI dashboard for a UK care agency. In the process, we found £86,400 in recoverable value they didn't know existed.
+
+Not a projection. Not a theoretical exercise. Three numbers, from their own systems, that nobody was looking at.
+
+- **£60,000** in receivables sitting at 90 days in their accounting system
+- **£12,000** in leadership time spent on manual Monday morning reporting — every year
+- **£14,400** in compliance risk that nobody was monitoring week to week
+
+None of that was hidden. It just had nowhere to go.
+
+This guide gives you the exact prompt I used to surface those numbers — and the process to run it on your own business in about three minutes.
+
+---
+
+## Why Your Data Is Hiding Money
+
+Every small business I work with has the same problem. It's not a data problem. It's a visibility problem.
+
+Your finances are in Xero or Sage. Your staff data is in BreatheHR — or a spreadsheet someone built in 2021 that nobody's touched since. Your operations are in something else entirely.
+
+All of them running. All of them full of data. None of them talking to each other.
+
+So what happens when you need to know how the business is doing? You open Xero. You check your inbox. You try to remember how busy the team was last month. Then you give up and go with your gut.
+
+That's not a you problem. That's a systems problem.
+
+And here's what it costs — not just time:
+
+- Revenue is up but margin is down, and nobody can see it
+- Three people off this week means delivery is about to drop, and nobody's connecting those dots
+- £40,000 in receivables has been sitting at 90 days, hidden in Sage, with nobody flagging it
+
+The money is there. The signal is there. But because nothing is connected, nobody's looking.
+
+---
+
+## The Discovery Process
+
+Before I touch a tool with any client, I do a discovery. I map every system they're running. Every data source. Every number that actually drives the business.
+
+Only then do I start building anything.
+
+Here's why that matters: most businesses that come to me want a dashboard, or an automation, or "something with AI." But they don't know what they need connected. The discovery is what tells you where the value actually sits.
+
+The process:
+
+1. **Map every system** — what tools are running, what data lives where
+2. **Identify every data source** — what's being captured, what's being missed
+3. **Find the gaps** — which connections between systems would surface hidden value
+4. **Prioritise** — which connections to build first, based on recoverable value
+
+That's the process. And you can run the first two steps yourself, right now, for free.
+
+---
+
+## The Claude Discovery Prompt
+
+Open [claude.ai](https://claude.ai). Paste this in. Fill in your own details.
+
+```
+I run a [YOUR BUSINESS TYPE] in [LOCATION], UK.
+
+Business Profile:
+- [X] staff
+- Approximately [X] clients
+- [Regulated by: CQC / FCA / SRA / None]
+
+Current Systems:
+- [SYSTEM 1] for [PURPOSE]
+  (e.g. SAGE for accounting: invoicing, payroll, and P&L reporting)
+- [SYSTEM 2] for [PURPOSE]
+  (e.g. BreatheHR for HR: staff records, absence, training dates)
+- [SYSTEM 3] for [PURPOSE]
+  (e.g. NOURISH for operations: care visits, client records, incidents)
+- [SYSTEM 4] for [PURPOSE]
+  (e.g. Google Sheets for reporting: manual weekly reports, KPI tracking)
+
+Please analyse my business operations and produce:
+
+1. A data discovery and dashboard strategy — what data exists in each
+   system and what's being missed between them
+
+2. A gap analysis — what connections between systems would surface
+   hidden value (revenue leaks, compliance risks, operational blind spots)
+
+3. A priority matrix — which connections to build first based on
+   estimated recoverable value, with conservative annual estimates
+
+For each finding, note:
+- Which system(s) the data sits in
+- Why it's not currently visible
+- What connecting it would reveal
+- A conservative annual value estimate where applicable
+```
+
+That's it. Three minutes. Fill in your systems, paste it in, and read what comes back.
+
+---
+
+## What You'll Get Back
+
+Claude will return a structured analysis of your business. Here's what to look for:
+
+**The data audit** breaks down what each of your systems captures and — more importantly — what falls between the cracks. Most businesses have 3-5 blind spots they've never noticed because each system only shows its own slice.
+
+**The gap analysis** shows you which connections between systems would surface hidden value. This is where the money lives. Not in any single system, but in the space between them.
+
+**The priority matrix** ranks the connections by estimated annual value. This is what tells you where to start.
+
+When I ran this for Bluebell Care, three things jumped out immediately:
+
+- Compliance risks buried in the care monitoring data — patterns that only show up when you look across a full month. Nobody was doing that.
+- £60,000 in receivables sitting at 90 days. Hidden in Sage. Nobody flagging it.
+- HR and operational data that had never been in the same room. They couldn't see the link between staffing levels and service quality.
+
+None of that required a developer to spot. It just required someone to ask the right questions first.
+
+---
+
+## The £86,400 Breakdown
+
+The title of the video says £86,400. Here's exactly where that number comes from. It's not a projection. It's built from their own data.
+
+| What | Source | Annual Value |
+|------|--------|-------------|
+| Receivables recovery — invoices sitting at 90 days, recovered once the dashboard flagged them weekly | Sage | **£60,000** |
+| Leadership time recovered — CEO spending 4 hours every Monday on manual reporting, at her day rate | CEO day rate calculation | **£12,000** |
+| Compliance risk reduction — missed visits and late calls carry CQC regulatory exposure, valued conservatively | CQC monitoring data | **£14,400** |
+| | **Total** | **£86,400** |
+
+Three numbers. From their own systems. That's the £86,400.
+
+---
+
+## Three Routes to a Connected System
+
+Now — getting from that discovery prompt to a live connected system. There are three honest routes.
+
+### Route 1: Bring someone in
+
+Here's why the discovery matters so much at this stage: you go into that conversation knowing exactly what you need. You're not paying a consultant to figure out your business. You're paying them to build something you've already mapped. That changes the brief completely.
+
+### Route 2: n8n or Make
+
+Automation tools. Visual. Drag and drop. Free to start. If you've got a few weekends and you're comfortable learning a new tool, this is how a lot of small businesses build their first connected workflow.
+
+- [n8n.io](https://n8n.io) — open source, self-hosted or cloud
+- [make.com](https://make.com) — cloud-based, visual builder
+
+### Route 3: Claude Code
+
+More powerful. Writes the scripts that pull data from your systems automatically. When your systems need to share data directly, it gets technical fast. But if you're curious, it's worth exploring.
+
+The discovery work you've done — the mapping, the four questions, the prompt — that makes every path better, whichever one you choose.
+
+---
+
+## Want Someone to Do the Discovery, the Build, and Hand You the Dashboard?
+
+That's exactly what I do.
+
+I'm a finance professional with 15+ years across UK public and private sector — Visa Europe, Cabinet Office, NHS. I now run Core AI Solutions, an AI consultancy for UK small businesses.
+
+I work with a small number of UK businesses directly. The process starts with a strategy call where I listen to how your business actually runs, and we figure out whether a connected system would make a real difference.
+
+No pitch. No pressure. If it's not right, I'll tell you.
+
+**Book a strategy call:** [coreaisolutions.co.uk](https://coreaisolutions.co.uk)
+
+**Learn more:** [mannyamoah.com](https://mannyamoah.com)
