@@ -13,9 +13,9 @@ const ctas = [
     external: true,
   },
   {
-    href: "https://www.instagram.com/manny.amoah/",
+    href: "https://www.instagram.com/mannyamoah_/",
     text: "Follow for daily automation tips",
-    desc: "New guides and walkthroughs every week on Instagram @mannyamoah",
+    desc: "New guides and walkthroughs every week on Instagram @mannyamoah_",
     external: true,
   },
 ];

@@ -9,66 +9,102 @@ date: "2026-07-04"
 tier: "deep-dive"
 ---
 
-# The £86K Discovery Prompt
+# You Already Have the Data. You Just Can't See It.
 
-I built a live KPI dashboard for a UK care agency. In the process, we found £86,400 in recoverable value they didn't know existed.
+Every Monday morning, Sarah opens four tabs.
 
-Not a projection. Not a theoretical exercise. Three numbers, from their own systems, that nobody was looking at.
+Sage for the numbers. BreatheHR for the staff. Nourish for the care visits. A Google Sheet she built two years ago that holds the whole week together — barely.
 
-- **£60,000** in receivables sitting at 90 days in their accounting system
-- **£12,000** in leadership time spent on manual Monday morning reporting — every year
-- **£14,400** in compliance risk that nobody was monitoring week to week
+She spends four hours pulling data from each one. Cross-referencing. Guessing at the gaps. By midday she has something that looks like a picture of how the business is doing.
 
-None of that was hidden. It just had nowhere to go.
+But it's not a picture. It's a collage. And the pieces don't quite fit.
 
-This guide gives you the exact prompt I used to surface those numbers — and the process to run it on your own business in about three minutes.
+She knows this. She's known it for months. **But** the business is running, clients are served, staff show up — so the four-hour Monday ritual continues.
 
----
+**Until someone asks the question she's never had time to ask.**
 
-## Why Your Data Is Hiding Money
-
-Every small business I work with has the same problem. It's not a data problem. It's a visibility problem.
-
-Your finances are in Xero or Sage. Your staff data is in BreatheHR — or a spreadsheet someone built in 2021 that nobody's touched since. Your operations are in something else entirely.
-
-All of them running. All of them full of data. None of them talking to each other.
-
-So what happens when you need to know how the business is doing? You open Xero. You check your inbox. You try to remember how busy the team was last month. Then you give up and go with your gut.
-
-That's not a you problem. That's a systems problem.
-
-And here's what it costs — not just time:
-
-- Revenue is up but margin is down, and nobody can see it
-- Three people off this week means delivery is about to drop, and nobody's connecting those dots
-- £40,000 in receivables has been sitting at 90 days, hidden in Sage, with nobody flagging it
-
-The money is there. The signal is there. But because nothing is connected, nobody's looking.
+Where is the money you're not seeing?
 
 ---
 
-## The Discovery Process
+## The Gut-Feel Trap
 
-Before I touch a tool with any client, I do a discovery. I map every system they're running. Every data source. Every number that actually drives the business.
+You run a good business. You know your clients. You know your team. You've got instincts that have kept you going for years.
 
-Only then do I start building anything.
+**But** instinct can't tell you that £60,000 in invoices has been sitting unpaid for 90 days — because that number lives in Sage, and Sage doesn't talk to the spreadsheet you actually check every Monday.
 
-Here's why that matters: most businesses that come to me want a dashboard, or an automation, or "something with AI." But they don't know what they need connected. The discovery is what tells you where the value actually sits.
+Instinct can't connect last month's staffing gaps to this month's drop in service quality — because HR data and operational data have never been in the same room.
 
-The process:
+Instinct can't flag that your compliance exposure just changed — because the pattern only shows up when you look across a full month of monitoring data. Nobody does that manually.
 
-1. **Map every system** — what tools are running, what data lives where
-2. **Identify every data source** — what's being captured, what's being missed
-3. **Find the gaps** — which connections between systems would surface hidden value
-4. **Prioritise** — which connections to build first, based on recoverable value
+So the business runs. Revenue comes in. You make decisions on feel.
 
-That's the process. And you can run the first two steps yourself, right now, for free.
+**Therefore** the signals sit there. Quietly. In systems that are full of data and empty of connection.
+
+That's not a failure of leadership.
+That's a systems problem dressed up as business-as-usual.
 
 ---
 
-## The Claude Discovery Prompt
+## What Happened When Someone Finally Connected the Dots
 
-Open [claude.ai](https://claude.ai). Paste this in. Fill in your own details.
+A UK care agency — we'll call them Bluebell — ran exactly this way for years. Four systems. Four separate views. No connection between them.
+
+Then someone mapped what was actually in each system. Not the software features — the *data*. What was being captured, what was falling between the cracks, and what would surface if you connected them.
+
+Three things jumped out immediately.
+
+**First:** £60,000 in receivables had been sitting at 90 days. Hidden inside Sage. No alert, no flag, no weekly check. The money was owed. It just wasn't being chased — because nobody could see it in the context of everything else.
+
+**Second:** the CEO was spending four hours every Monday morning manually compiling a report from four different tools. At her day rate, that's £12,000 a year in leadership time — spent on admin that a connected system does automatically.
+
+**Third:** compliance risks were buried in the care monitoring data. Patterns — missed visits, late calls — that only show up when you look across a full month. CQC regulatory exposure that nobody was tracking week to week. Valued conservatively: £14,400 in risk reduction.
+
+<div style={{overflowX: 'auto', margin: '2rem 0'}}>
+<table style={{width: '100%', borderCollapse: 'collapse', fontSize: '15px'}}>
+<thead>
+<tr style={{borderBottom: '2px solid #CC5500'}}>
+<th style={{textAlign: 'left', padding: '12px 16px', fontWeight: 700}}>What was found</th>
+<th style={{textAlign: 'left', padding: '12px 16px', fontWeight: 700}}>Where it was hiding</th>
+<th style={{textAlign: 'right', padding: '12px 16px', fontWeight: 700}}>Annual value</th>
+</tr>
+</thead>
+<tbody>
+<tr style={{borderBottom: '1px solid #e5e5e5'}}>
+<td style={{padding: '12px 16px'}}>Receivables sitting unpaid at 90 days — recovered once flagged weekly</td>
+<td style={{padding: '12px 16px'}}>Sage</td>
+<td style={{textAlign: 'right', padding: '12px 16px', fontWeight: 700, color: '#CC5500'}}>£60,000</td>
+</tr>
+<tr style={{borderBottom: '1px solid #e5e5e5'}}>
+<td style={{padding: '12px 16px'}}>CEO time spent on manual Monday reporting — at her day rate, every year</td>
+<td style={{padding: '12px 16px'}}>Spreadsheets</td>
+<td style={{textAlign: 'right', padding: '12px 16px', fontWeight: 700, color: '#CC5500'}}>£12,000</td>
+</tr>
+<tr style={{borderBottom: '1px solid #e5e5e5'}}>
+<td style={{padding: '12px 16px'}}>Compliance risk — missed visits and late calls carrying CQC exposure</td>
+<td style={{padding: '12px 16px'}}>Care monitoring CSV</td>
+<td style={{textAlign: 'right', padding: '12px 16px', fontWeight: 700, color: '#CC5500'}}>£14,400</td>
+</tr>
+<tr style={{borderTop: '2px solid #CC5500'}}>
+<td style={{padding: '12px 16px', fontWeight: 700}} colSpan={2}>Total recoverable value</td>
+<td style={{textAlign: 'right', padding: '12px 16px', fontWeight: 700, color: '#CC5500', fontSize: '18px'}}>£86,400</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+Three numbers. From their own systems. Not a projection — built from data they already had.
+
+None of it was hidden.
+It just had nowhere to go.
+
+---
+
+## You Can Run This Discovery Yourself. Right Now.
+
+You don't need a consultant to start this process. You don't need technical skills. You need three minutes and a free tool.
+
+Open [claude.ai](https://claude.ai). Paste the prompt below. Fill in your own details.
 
 ```
 I run a [YOUR BUSINESS TYPE] in [LOCATION], UK.
@@ -106,78 +142,54 @@ For each finding, note:
 - A conservative annual value estimate where applicable
 ```
 
-That's it. Three minutes. Fill in your systems, paste it in, and read what comes back.
+That's it.
+
+Fill in your systems. Hit enter. Read what comes back.
+
+Most businesses have three to five blind spots they've never noticed — because each system only shows its own slice. The prompt surfaces what falls between them.
 
 ---
 
-## What You'll Get Back
+## What Happens Next Depends on What You Want
 
-Claude will return a structured analysis of your business. Here's what to look for:
-
-**The data audit** breaks down what each of your systems captures and — more importantly — what falls between the cracks. Most businesses have 3-5 blind spots they've never noticed because each system only shows its own slice.
-
-**The gap analysis** shows you which connections between systems would surface hidden value. This is where the money lives. Not in any single system, but in the space between them.
-
-**The priority matrix** ranks the connections by estimated annual value. This is what tells you where to start.
-
-When I ran this for Bluebell Care, three things jumped out immediately:
-
-- Compliance risks buried in the care monitoring data — patterns that only show up when you look across a full month. Nobody was doing that.
-- £60,000 in receivables sitting at 90 days. Hidden in Sage. Nobody flagging it.
-- HR and operational data that had never been in the same room. They couldn't see the link between staffing levels and service quality.
-
-None of that required a developer to spot. It just required someone to ask the right questions first.
-
----
-
-## The £86,400 Breakdown
-
-The title of the video says £86,400. Here's exactly where that number comes from. It's not a projection. It's built from their own data.
-
-| What | Source | Annual Value |
-|------|--------|-------------|
-| Receivables recovery — invoices sitting at 90 days, recovered once the dashboard flagged them weekly | Sage | **£60,000** |
-| Leadership time recovered — CEO spending 4 hours every Monday on manual reporting, at her day rate | CEO day rate calculation | **£12,000** |
-| Compliance risk reduction — missed visits and late calls carry CQC regulatory exposure, valued conservatively | CQC monitoring data | **£14,400** |
-| | **Total** | **£86,400** |
-
-Three numbers. From their own systems. That's the £86,400.
-
----
-
-## Three Routes to a Connected System
-
-Now — getting from that discovery prompt to a live connected system. There are three honest routes.
+The prompt gives you the map. Getting from the map to a live connected system — that's a different conversation. And there are three honest routes.
 
 ### Route 1: Bring someone in
 
-Here's why the discovery matters so much at this stage: you go into that conversation knowing exactly what you need. You're not paying a consultant to figure out your business. You're paying them to build something you've already mapped. That changes the brief completely.
+Here's the thing the discovery changes: you walk into that conversation knowing exactly what you need. You're not paying someone to figure out your business. You're paying them to build something you've already mapped.
 
-### Route 2: n8n or Make
+That changes the brief completely. And it changes the price.
 
-Automation tools. Visual. Drag and drop. Free to start. If you've got a few weekends and you're comfortable learning a new tool, this is how a lot of small businesses build their first connected workflow.
+### Route 2: Build it yourself with n8n or Make
 
-- [n8n.io](https://n8n.io) — open source, self-hosted or cloud
-- [make.com](https://make.com) — cloud-based, visual builder
+Visual automation tools. Drag and drop. Free to start. If you've got a few weekends and you're comfortable learning a new platform, this is how a lot of small businesses build their first connected workflow.
+
+[n8n.io](https://n8n.io) is open source. [make.com](https://make.com) is cloud-based. Both let you connect systems without writing code.
 
 ### Route 3: Claude Code
 
-More powerful. Writes the scripts that pull data from your systems automatically. When your systems need to share data directly, it gets technical fast. But if you're curious, it's worth exploring.
+More powerful. Writes the scripts that pull data directly from your systems. When the connections get technical — APIs, database queries, scheduled exports — this is the path. Steeper learning curve, but if you're curious, worth exploring.
 
-The discovery work you've done — the mapping, the four questions, the prompt — that makes every path better, whichever one you choose.
+The discovery work you've done — the mapping, the prompt, the gaps you've now seen — that makes every route better, whichever one you choose.
 
 ---
 
-## Want Someone to Do the Discovery, the Build, and Hand You the Dashboard?
+## If You Want Someone to Do All of It
 
-That's exactly what I do.
+The discovery. The build. The dashboard in your hands.
 
-I'm a finance professional with 15+ years across UK public and private sector — Visa Europe, Cabinet Office, NHS. I now run Core AI Solutions, an AI consultancy for UK small businesses.
+That's what I do.
 
-I work with a small number of UK businesses directly. The process starts with a strategy call where I listen to how your business actually runs, and we figure out whether a connected system would make a real difference.
+I'm Manny — finance background, 15 years across Visa Europe, Cabinet Office, NHS. I now run Core AI Solutions, an AI consultancy for UK small businesses.
 
-No pitch. No pressure. If it's not right, I'll tell you.
+I work with a small number of businesses directly. It starts with a strategy call — I listen to how your business actually runs, and we figure out whether a connected system would make a real difference for you.
 
-**Book a strategy call:** [coreaisolutions.co.uk](https://coreaisolutions.co.uk)
+No pitch. No pressure. If it's not the right fit, I'll say so.
 
-**Learn more:** [mannyamoah.com](https://mannyamoah.com)
+**Book a call:** [coreaisolutions.co.uk](https://coreaisolutions.co.uk)
+
+**More about me:** [mannyamoah.com](https://mannyamoah.com)
+
+---
+
+*The money was never missing. You just didn't have anywhere to look.*
