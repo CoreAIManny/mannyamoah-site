@@ -1,0 +1,109 @@
+---
+title: "Turn Any Messy Idea Into a Clean Diagram — With One Free Claude Skill"
+slug: "claude-excalidraw-skill"
+category: "AI Tools"
+industry: "All"
+topic: "AI Tools"
+description: "The free Claude skill I built to fix my own overthinking — and ended up helping my ADHD business partner actually see his thoughts for the first time."
+date: "2026-08-01"
+tier: "deep-dive"
+featured: true
+---
+
+After six years of contracting across finance and tech, switching to a new role every three to six months, I noticed a pattern. Every new job brought new systems, new chaos, and new problems.
+
+And if I'm honest? My brain just doesn’t turn off.
+
+I’m an overthinker on a good day, but throw in jumping between different contracts and my head ends up completely full. I tried using traditional notes apps, but bullet points just didn't cut it. Thoughts don't come out as neat list items when you're trying to figure out a complex problem; they come out in giant, chaotic bursts.
+
+So, I built a skill in Claude to sort my own head out.
+
+Now, I can literally just talk into my phone — vent out whatever messy idea or voice note is bouncing around my head — paste it into Claude, and say *"turn this into a diagram."*
+
+A few seconds later, I get back a clean, visual mind map with boxes, arrows, and colour-coded sections. I open it in a completely free tool, tweak whatever I want, and suddenly the idea actually makes sense. No Miro subscriptions, no Canva templates, and no dragging shapes around for an hour.
+
+I originally built it strictly for myself. But then my business partner — who has ADHD — tried it out. He told me it was literally the first time he'd ever been able to *see* his own thoughts laid out on a page, instead of just feeling them all at once.
+
+That was the moment I realized I had to share it. Here is what it does, why it works so well, and how you can set it up in about two minutes (no coding needed, works on the basic $20/month Claude plan).
+
+---
+
+## What it actually does
+
+It's pretty simple: **one input, one output.**
+
+- **In:** Your raw, unfiltered brain-dump. A voice transcript from your phone, meeting notes, a rough decision you're weighing, or a timeline. It can be as messy as you like.
+- **Out:** A `.excalidraw` file.
+
+You drop that file straight into [Excalidraw.com](https://excalidraw.com) (just click **File → Open**). Excalidraw is 100% free, so there’s no paywall sitting between you and your board. Everything is fully editable: move boxes around, tweak the text, change a colour, or export it as an image to drop straight into a slide deck or Slack chat.
+
+If your idea is massive — like a strategy deck with lots of background context — the skill also generates a supporting Markdown document alongside the diagram. The board acts as the quick map you glance at; the document holds all the fine print.
+
+### It handles all the usual shapes visual thoughts take:
+
+- **Timelines and flows:** Step-by-step processes linked with arrows.
+- **Side-by-side comparisons:** Problems vs. solutions, before vs. after, or Option A vs. Option B.
+- **Stacked arguments:** Colour-coded layers building up to a key takeaway.
+- **Clear conclusions:** Everything points down to a single "So what?" box at the bottom.
+
+**Here’s a real example.**  
+Say you dump in a voice note like this:  
+> *"We tried cold outreach, it didn't convert, spent way too long building the site, only real client was a referral... we need to fix the offer and the follow-up process."*
+
+Instead of leaving that as a wall of stressful text, the skill turns it into a tidy, titled board. You get a left-to-right flow of what you tried, a red panel for what failed, a yellow panel with the key numbers, and a green box highlighting the two exact steps to fix next. Same exact words, but now your brain can actually process it.
+
+---
+
+## Why a "skill" beats just asking Claude to draw
+
+If you’ve ever asked basic ChatGPT or standard Claude to "draw a diagram," you've probably hit a wall: broken files, blank screens, random layout changes every single prompt, or colours that make zero sense.
+
+A **Claude Skill** is different because it includes a tiny, pre-tested piece of background code. That code guarantees three things:
+1. The file opens cleanly in Excalidraw every single time without crashing.
+2. It uses a consistent colour system (Red = problems, Green = wins, Blue = targets, Purple = action items).
+3. The layout stays clean and readable without you having to re-prompt it five times.
+
+You teach Claude how to do it right once, and it remembers forever.
+
+---
+
+## How to install it in 3 easy steps (No coding required)
+
+You don't need to be a developer, touch a terminal, or know any code. This works in the standard Claude web or desktop app on the basic Claude Pro plan (~$20/£17 a month).
+
+### Step 1 — Turn on the engine
+In Claude, click your profile icon in the bottom left, go to **Settings → Capabilities**, and toggle on **"Code execution and file creation."** This allows Claude to run the background script and hand you your diagram file. (You only have to do this once).
+
+### Step 2 — Add the skill
+[Download the skill file here](/excalidraw-board.zip) (it’s a small `.zip` file — **do not unzip it**).  
+In Claude, go to **Settings → Customize → Skills → Add**, select the `.zip` file you just downloaded, and switch it **ON**.
+
+### Step 3 — Use it
+Open a brand-new chat in Claude, paste in your messy notes or a voice transcript, and type:
+
+> *"Turn this into an Excalidraw board."*
+
+Claude will run the skill and give you a file to download. Head over to [Excalidraw.com](https://excalidraw.com), click **File → Open**, and drop the file in. Boom — there’s your editable mind map.
+
+---
+
+## How to get the best results
+
+To keep your diagrams looking like a professional slide rather than a cluttered whiteboard, keep these 4 quick tips in mind:
+
+1. **One point per box:** Keep text brief. If a thought needs a long paragraph, let it live in the supporting document instead of crowding the visual board.
+2. **Use the supporting doc for details:** If you're outlining a full business strategy, tell Claude to write the Markdown doc alongside the board. Board = quick view; Doc = deep dive.
+3. **Stick to meaningful colours:** Don't color things just to make them pretty. Tell Claude what represents a problem, a target, or a win so you can scan it instantly.
+4. **Define the key takeaway:** Tell Claude the main thing the reader should get. Completing the phrase *"The person seeing this should immediately realize..."* helps Claude build a much clearer diagram.
+
+---
+
+## Already using Claude Code?
+
+If you’re a developer using the command-line version of Claude Code, you can bypass the web interface entirely. Unzip the folder and drop `excalidraw-board` straight into your `~/.claude/skills/` directory. You can invoke it natively in any terminal session with `/excalidraw-board`.
+
+---
+
+*Want to turn one of your own repetitive workflows into a custom Claude skill? [Get in touch](/contact) — I’d be happy to point you in the right direction!*
+
+**Manny Amoah** · manny@coreaisolutions.com
